@@ -6,7 +6,7 @@ A simple Wechat-like UIImageView browser demo, demonstrating how to make a pictu
 ### Features:
 * Zoom out transition
 * Progress loading effect
-* 
+* more...
 
 ### Dependency :
 
