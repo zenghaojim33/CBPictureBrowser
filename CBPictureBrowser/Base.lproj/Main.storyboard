@@ -1,25 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="efd-PJ-Q4S">
+                                <rect key="frame" x="68" y="45" width="240" height="165"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="Dau-RM-9W3"/>
+                                    <constraint firstAttribute="width" constant="240" id="E6q-y6-0xV"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ir9-qv-K5a" appends="YES" id="hqw-bP-tNN"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DIa-n3-4RL">
+                                <rect key="frame" x="68" y="235" width="240" height="165"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2zB-si-Lzi"/>
+                                    <constraint firstAttribute="height" constant="165" id="TdI-Du-WiA"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="iUq-97-qEx" appends="YES" id="wKk-iK-qsy"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A6k-IW-4Rp">
+                                <rect key="frame" x="68" y="427" width="240" height="165"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="hNV-Z1-efg"/>
+                                    <constraint firstAttribute="width" constant="240" id="wSV-QC-mLC"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0Ba-pY-1gx" appends="YES" id="Nhz-0E-lkP"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="A6k-IW-4Rp" firstAttribute="centerX" secondItem="DIa-n3-4RL" secondAttribute="centerX" id="B8q-An-Mg8"/>
+                            <constraint firstItem="A6k-IW-4Rp" firstAttribute="top" secondItem="DIa-n3-4RL" secondAttribute="bottom" constant="27" id="HQu-e4-Rts"/>
+                            <constraint firstItem="DIa-n3-4RL" firstAttribute="top" secondItem="efd-PJ-Q4S" secondAttribute="bottom" constant="25" id="Svi-k1-LtA"/>
+                            <constraint firstItem="efd-PJ-Q4S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WqW-iN-l8e"/>
+                            <constraint firstItem="DIa-n3-4RL" firstAttribute="centerX" secondItem="efd-PJ-Q4S" secondAttribute="centerX" id="cSS-jL-61m"/>
+                            <constraint firstItem="A6k-IW-4Rp" firstAttribute="height" secondItem="DIa-n3-4RL" secondAttribute="height" id="f4s-Yr-VYl"/>
+                            <constraint firstItem="efd-PJ-Q4S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="hdd-wD-pXS"/>
+                            <constraint firstItem="A6k-IW-4Rp" firstAttribute="width" secondItem="DIa-n3-4RL" secondAttribute="width" id="s9D-yb-ZNw"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="image1" destination="efd-PJ-Q4S" id="fWe-Bp-Qmg"/>
+                        <outlet property="image2" destination="DIa-n3-4RL" id="yRn-JV-CBe"/>
+                        <outlet property="image3" destination="A6k-IW-4Rp" id="NYv-4i-Rpb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ir9-qv-K5a">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="r0V-8U-YSg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="iUq-97-qEx">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="l3C-ap-gdp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0Ba-pY-1gx">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="kJa-Hs-kYH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-701.5" y="423.5"/>
         </scene>
     </scenes>
 </document>
