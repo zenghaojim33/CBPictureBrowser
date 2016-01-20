@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
     
     _originalImageUrlArray = [NSArray arrayWithObjects:@"http://developer.qiniu.com/resource/gogopher.jpg?imageMogr2",@"http://7xkwqs.com2.z0.glb.qiniucdn.com/FkLGTheMZixGA7U6CzMZmzuJBhee",@"http://7xkwqs.com2.z0.glb.qiniucdn.com/FobXg9ZpQKBi4ll3ELjgLGceueCv",nil];
     
@@ -57,8 +57,12 @@
         CBBrowsePictureItem * item = [[CBBrowsePictureItem alloc]init];
         item.originalImageURL = _originalImageUrlArray[i];
         item.thumbnail =  [_images[i].image copy];
+        
+        //This value may be useful if you want the browser dismiss animation ( not implemented )
         CGRect originFrame = [tap.view convertRect:tap.view.bounds toView:self.view];
         item.originFrame = originFrame;
+        
+        
         if (i == page) {
             item.isInitialPicure = YES;
         }
